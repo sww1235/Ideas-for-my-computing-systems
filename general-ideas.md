@@ -1,3 +1,7 @@
+# General Ideas
+
+## Base Principles
+
 want to be able to rebuild from nothing.
 
 -   build kernal and minimum amount of functionality to run script
@@ -9,10 +13,19 @@ further scripts to customize for each individual system
 look at using modified version of
 [terrorshell](http://www.github.com/sww1235/terrorshell) for bashrc etc.
 
+use a set of statically linked basic tools
+
+## Base OS
+
 look at [tiny core linux](http://tinycorelinux.net/concepts.html),
 [ttylinux](http://freecode.com/projects/ttylinux/) or
-[Linux From Scratch](http://www.linuxfromscratch.org/lfs/view/stable/index.html)
+[Linux From Scratch (LFS)](http://www.linuxfromscratch.org/lfs/view/stable/index.html)
 for base OS.
 
-Potentially look at other more mainstream OS's but make sure systemd is
-removable.
+### LFS specific ideas
+
+if using LFS for base OS, then install the build environment (Ubuntu Server) on
+a USB stick and and only update if absolutely necessary.
+
+Boot off of USB on build machine either with a blank drive connected or mount a
+network volume on which to build the lfs system.
