@@ -29,3 +29,5 @@ a USB stick and and only update if absolutely necessary.
 
 Boot off of USB on build machine either with a blank drive connected or mount a
 network volume on which to build the lfs system.
+
+look at [sinit/runit](https://github.com/inthecloud247/runit-for-lfs) for init script stuff
