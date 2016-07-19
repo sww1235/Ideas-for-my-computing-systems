@@ -8,6 +8,10 @@ want to be able to rebuild from nothing.
 -   use as base for other installs script that installs remainder of core tools
 -   primarily suckless tools, staticlly compiled binaries
 
+Have basic clonable image on USB flashdrive using kernal w/ generic drivers + networking + ssh + bash
+
+Recompile kernal on each machine once image is cloned based on hardware to slim down kernal
+
 further scripts to customize for each individual system
 
 look at using modified version of
