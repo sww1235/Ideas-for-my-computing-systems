@@ -23,6 +23,8 @@ further scripts to customize for each individual system
 look at using modified version of
 [terrorshell](http://www.github.com/sww1235/terrorshell) for bashrc etc.
 
+look at [dotbot](https://github.com/anishathalye/dotbot)
+
 use a set of statically linked basic tools
 
 ## Base OS
