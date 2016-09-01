@@ -8,9 +8,15 @@ want to be able to rebuild from nothing.
 -   use as base for other installs script that installs remainder of core tools
 -   primarily suckless tools, staticlly compiled binaries
 
-Have basic clonable image on USB flashdrive using kernal w/ generic drivers + networking + ssh + bash
+~~Have basic clonable image on USB flashdrive using kernal w/ generic drivers + networking + ssh + bash~~
 
-Recompile kernal on each machine once image is cloned based on hardware to slim down kernal
+~~Recompile kernal on each machine once image is cloned based on hardware to slim down kernal~~
+
+Use powerful build machine to compile linux kernels and other necessary software for each architecture/machine. This machine will start out using a prebuilt distro and potenitlally change to a custom image later. 
+
+
+
+PXE boot(potentially have syslinux in chain somewhere) each machine that needs to image with very slim image. Then a script will prep the filesystem on the local disk, partioning, bootloader, etc, then copy necessary files from mounted nfs share.
 
 further scripts to customize for each individual system
 
@@ -35,3 +41,18 @@ Boot off of USB on build machine either with a blank drive connected or mount a
 network volume on which to build the lfs system.
 
 look at [sinit/runit](https://github.com/inthecloud247/runit-for-lfs) for init script stuff
+
+## syslinux ideas
+
+- Hard drive testing tools
+    - Western Digital Tools (WD Tools)
+    - Seagate Tools (Sea Tools)
+    - Hitachi 
+    - Parted Magic
+- Password Reset Tool
+- Memtest86+
+- DBAN
+- BIOS Flashing
+- DOS Command Line
+- Hiren's Boot CD
+- Quick Wipe
