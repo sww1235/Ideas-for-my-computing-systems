@@ -44,6 +44,14 @@ network volume on which to build the lfs system.
 
 look at [sinit/runit](https://github.com/inthecloud247/runit-for-lfs) for init script stuff
 
+#### Notes about LFS
+
+LFS is built using an established linux based host system. 
+
+All LFS specific work takes place on a separate mounted partition which is mounted at $LFS. This partition will have a file system created on it.
+
+$LFS will be the / of your new LFS based system. Most steps in LFS are done using chroot so that commands you run see $LFS as / .
+
 ## syslinux ideas
 
 - Hard drive testing tools
