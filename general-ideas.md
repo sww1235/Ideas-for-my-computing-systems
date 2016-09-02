@@ -12,7 +12,7 @@ want to be able to rebuild from nothing.
 
 ~~Recompile kernal on each machine once image is cloned based on hardware to slim down kernal~~
 
-Use powerful build machine to compile linux kernels and other necessary software for each architecture/machine. This machine will start out using a prebuilt distro and potenitlally change to a custom image later. 
+Use powerful build machine to compile/crosscompile custom linux kernels and other necessary software for each architecture/machine. This machine will start out using a prebuilt distro and potentially change to a custom image later. 
 
 
 
@@ -46,7 +46,7 @@ look at [sinit/runit](https://github.com/inthecloud247/runit-for-lfs) for init s
 
 #### Notes about LFS
 
-LFS is built using an established linux based host system. 
+LFS is built using an established linux based host system.
 
 All LFS specific work takes place on a separate mounted partition which is mounted at $LFS. This partition will have a file system created on it.
 
@@ -57,7 +57,7 @@ $LFS will be the / of your new LFS based system. Most steps in LFS are done usin
 - Hard drive testing tools
     - Western Digital Tools (WD Tools)
     - Seagate Tools (Sea Tools)
-    - Hitachi 
+    - Hitachi
     - Parted Magic
 - Password Reset Tool
 - Memtest86+
