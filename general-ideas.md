@@ -62,7 +62,7 @@ using chroot so that commands you run see $LFS as / .
 
 ## syslinux ideas
 
-See [potential pxelinux config file](../default) for actual potential
+See [potential pxelinux config file](./default) for actual potential
 config. what is listed below are just ideas.
 
 -   Hard drive testing tools
