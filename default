@@ -1,0 +1,4 @@
+# this file will need to be placed at /tftpboot/pxelinux.cfg/default
+
+# more specific config files will be included based on hex encoded IP or mac
+# address
