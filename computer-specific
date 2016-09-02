@@ -1,9 +1,9 @@
-# this file will need to be placed at /tftpboot/pxelinux.cfg/default
+# this file will need to be placed at /tftpboot/pxelinux.cfg/"computer id"
 
 # more specific config files will be included based on hex encoded IP or mac
 # address
 
-DEFAULT vesamenu.c32
+DEFAULT localboot
 
 PROMPT 0
 
