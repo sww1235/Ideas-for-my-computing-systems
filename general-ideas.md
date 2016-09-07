@@ -85,3 +85,20 @@ config. what is listed below are just ideas.
 -   Hiren's Boot CD
 
 -   Quick Wipe
+
+## Server role ideas
+
+-  Gitlab
+- DHCP / DNS / LDAP DC
+- Weather agrigator / monitoring point for local climate monitoring / server / forcaster
+- Database cluster (better to have one cluster or individual databases on each other machine for each service)
+- NTS + GPS local time
+- pfSense router / firewall
+- Asterix Voip server
+- freeNAS / some other NAS OS
+- Media Server / Transcoder
+- Deluge box
+- Web Server
+- update caching server
+- Imaging build machines
+- compliation cluster
