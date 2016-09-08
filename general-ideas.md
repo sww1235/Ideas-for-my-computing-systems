@@ -65,6 +65,10 @@ using chroot so that commands you run see $LFS as / .
 See [potential pxelinux config file](./default) for actual potential
 config. what is listed below are just ideas.
 
+Use MAC specific configs for specific machines, that boot a specific
+imaging/update script by default, else then use default config file that
+defaults to main menu.
+
 -   Hard drive testing tools
 
     -   Western Digital Tools (WD Tools)
@@ -88,17 +92,17 @@ config. what is listed below are just ideas.
 
 ## Server role ideas
 
--  Gitlab
-- DHCP / DNS / LDAP DC
-- Weather agrigator / monitoring point for local climate monitoring / server / forcaster
-- Database cluster (better to have one cluster or individual databases on each other machine for each service)
-- NTS + GPS local time
-- pfSense router / firewall
-- Asterix Voip server
-- freeNAS / some other NAS OS
-- Media Server / Transcoder
-- Deluge box
-- Web Server
-- update caching server
-- Imaging build machines
-- compliation cluster
+-   Gitlab
+-   DHCP / DNS / LDAP DC
+-   Weather agrigator / monitoring point for local climate monitoring / server / forcaster
+-   Database cluster (better to have one cluster or individual databases on each other machine for each service)
+-   NTS + GPS local time
+-   pfSense router / firewall
+-   Asterix Voip server
+-   freeNAS / some other NAS OS
+-   Media Server / Transcoder
+-   Deluge box
+-   Web Server
+-   update caching server
+-   Imaging build machines
+-   compliation cluster
