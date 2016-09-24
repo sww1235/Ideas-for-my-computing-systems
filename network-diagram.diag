@@ -1,0 +1,86 @@
+//General ideas
+
+{
+  internet [shape = cloud]
+  internet -- extFirewall
+
+  network publicWIFI {
+      address = "10.1.0.0/23";
+      //DHCP is handled by extFirewall
+      extFirewall [address = "10.1.0.1"];
+      WAP01;
+      WAP02;
+  }
+  network dmz {
+      //these addresses are public IPs that will be determined at a future date
+      address = "210.2.2.0/24"
+
+      extFirewall [address = "210.2.2.1"]
+      web01 [address = "210.2.2.2"];
+      web02 [address = "210.2.2.3"];
+      vpn01 [address = "210.2.2.4"];
+      vpn02 [address = "210.2.2.5"];
+  }
+  extFirewall -- intFirewall
+
+  network homeOffice {
+    address = "10.2.0.0/24"
+
+    intFirewall [address = "10.2.0.1"]
+    primaryPC [address = "10.2.0.2"]
+
+  }
+
+  network dataCenter {
+    address = "10.2.2.0/23"
+
+    intFirewall [address = "10.2.2.1"]
+    DHCP-Server [address = "10.2.2.2"]
+    DNS-Server  [address = "10.2.2.3"]
+    openNAS     [address = "10.2.2.4"]
+  }
+
+  network homeAutomation {
+    address = "10.2.8.0/21"
+
+    intFirewall [address = "10.2.8.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+
+  network AV-Lighting {
+    address = "10.2.24.0/21"
+
+    intFirewall [address = "10.2.24.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+  network house {
+    address = "10.2.4.0/23"
+
+    intFirewall [address = "10.2.4.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+
+  network industrialControls {
+    address = "10.2.16.0/21"
+
+    intFirewall [address = "10.2.16.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+
+  network privateWIFI {
+      address = "10.2.6.0/23";
+      //DHCP is handled by DHCP-Server
+      intFirewall [address = "10.2.6.1"];
+      WAP03;
+      WAP04;
+  }
+
+}

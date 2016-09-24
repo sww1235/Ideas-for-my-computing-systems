@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="600" viewBox="0 0 936 1884" width="480" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>//General ideas
+
+{
+  internet [shape = cloud]
+  internet -- extFirewall
+
+  network publicWIFI {
+      address = "10.1.0.0/23";
+      //DHCP is handled by extFirewall
+      extFirewall [address = "10.1.0.1"];
+      WAP01;
+      WAP02;
+  }
+  network dmz {
+      //these addresses are public IPs that will be determined at a future date
+      address = "210.2.2.0/24"
+
+      extFirewall [address = "210.2.2.1"]
+      web01 [address = "210.2.2.2"];
+      web02 [address = "210.2.2.3"];
+      vpn01 [address = "210.2.2.4"];
+      vpn02 [address = "210.2.2.5"];
+  }
+  extFirewall -- intFirewall
+
+  network homeOffice {
+    address = "10.2.0.0/24"
+
+    intFirewall [address = "10.2.0.1"]
+    primaryPC [address = "10.2.0.2"]
+
+  }
+
+  network dataCenter {
+    address = "10.2.2.0/23"
+
+    intFirewall [address = "10.2.2.1"]
+    DHCP-Server [address = "10.2.2.2"]
+    DNS-Server  [address = "10.2.2.3"]
+    openNAS     [address = "10.2.2.4"]
+  }
+
+  network homeAutomation {
+    address = "10.2.8.0/21"
+
+    intFirewall [address = "10.2.8.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+
+  network AV-Lighting {
+    address = "10.2.24.0/21"
+
+    intFirewall [address = "10.2.24.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+  network house {
+    address = "10.2.4.0/23"
+
+    intFirewall [address = "10.2.4.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+
+  network industrialControls {
+    address = "10.2.16.0/21"
+
+    intFirewall [address = "10.2.16.1"]
+    //DHCP Server [address = "10.2.2.2"]
+    //DNS Server  [address = "10.2.2.3"]
+    //openNAS     [address = "10.2.2.4"]
+  }
+
+  network privateWIFI {
+      address = "10.2.6.0/23";
+      //DHCP is handled by DHCP-Server
+      intFirewall [address = "10.2.6.1"];
+      WAP03;
+      WAP04;
+  }
+
+}
+</desc>
+  <path d="M 183 178 A16,8 0 0 1 199 170 A16,6 0 0 1 239 170 A16,8 0 0 1 255 178 A16,8 0 0 1 255 194 A16,20 0 0 1 231 194 A16,20 0 0 1 207 194 A16,20 0 0 1 183 194 A16,8 0 0 1 183 178" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="167" y="306" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="331" y="450" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="483" y="450" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="331" y="594" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="483" y="594" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="635" y="594" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="787" y="594" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="155" y="738" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="331" y="882" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="331" y="1026" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="483" y="1026" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="635" y="1026" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="331" y="1746" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="104" x="483" y="1746" />
+  <path d="M 131 391 L 611 391 A2,4 0 0 1 611 399 L 131 399 A2,4 0 0 1 131 391" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 535 L 915 535 A2,4 0 0 1 915 543 L 131 543 A2,4 0 0 1 131 535" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 679 L 307 679 A2,4 0 0 1 307 687 L 131 687 A2,4 0 0 1 131 679" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 823 L 459 823 A2,4 0 0 1 459 831 L 131 831 A2,4 0 0 1 131 823" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 967 L 763 967 A2,4 0 0 1 763 975 L 131 975 A2,4 0 0 1 131 967" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 1111 L 307 1111 A2,4 0 0 1 307 1119 L 131 1119 A2,4 0 0 1 131 1111" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 1255 L 307 1255 A2,4 0 0 1 307 1263 L 131 1263 A2,4 0 0 1 131 1255" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 1399 L 307 1399 A2,4 0 0 1 307 1407 L 131 1407 A2,4 0 0 1 131 1399" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 1543 L 307 1543 A2,4 0 0 1 307 1551 L 131 1551 A2,4 0 0 1 131 1543" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 131 1687 L 611 1687 A2,4 0 0 1 611 1695 L 131 1695 A2,4 0 0 1 131 1687" fill="rgb(0,0,0)" style="filter:url(#filter_blur)" />
+  <path d="M 128 388 L 608 388 A2,4 0 0 1 608 396 L 128 396 A2,4 0 0 1 128 388" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 608 396 A2,4 0 0 1 608 388" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 388 L 608 388" fill="none" stroke="none" />
+  <path d="M 128 532 L 912 532 A2,4 0 0 1 912 540 L 128 540 A2,4 0 0 1 128 532" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 912 540 A2,4 0 0 1 912 532" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 532 L 912 532" fill="none" stroke="none" />
+  <path d="M 128 676 L 304 676 A2,4 0 0 1 304 684 L 128 684 A2,4 0 0 1 128 676" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 304 684 A2,4 0 0 1 304 676" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 676 L 304 676" fill="none" stroke="none" />
+  <path d="M 128 820 L 456 820 A2,4 0 0 1 456 828 L 128 828 A2,4 0 0 1 128 820" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 456 828 A2,4 0 0 1 456 820" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 820 L 456 820" fill="none" stroke="none" />
+  <path d="M 128 964 L 760 964 A2,4 0 0 1 760 972 L 128 972 A2,4 0 0 1 128 964" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 760 972 A2,4 0 0 1 760 964" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 964 L 760 964" fill="none" stroke="none" />
+  <path d="M 128 1108 L 304 1108 A2,4 0 0 1 304 1116 L 128 1116 A2,4 0 0 1 128 1108" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 304 1116 A2,4 0 0 1 304 1108" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 1108 L 304 1108" fill="none" stroke="none" />
+  <path d="M 128 1252 L 304 1252 A2,4 0 0 1 304 1260 L 128 1260 A2,4 0 0 1 128 1252" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 304 1260 A2,4 0 0 1 304 1252" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 1252 L 304 1252" fill="none" stroke="none" />
+  <path d="M 128 1396 L 304 1396 A2,4 0 0 1 304 1404 L 128 1404 A2,4 0 0 1 128 1396" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 304 1404 A2,4 0 0 1 304 1396" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 1396 L 304 1396" fill="none" stroke="none" />
+  <path d="M 128 1540 L 304 1540 A2,4 0 0 1 304 1548 L 128 1548 A2,4 0 0 1 128 1540" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 304 1548 A2,4 0 0 1 304 1540" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 1540 L 304 1540" fill="none" stroke="none" />
+  <path d="M 128 1684 L 608 1684 A2,4 0 0 1 608 1692 L 128 1692 A2,4 0 0 1 128 1684" fill="rgb(185,203,228)" stroke="rgb(0,0,0)" />
+  <path d="M 608 1692 A2,4 0 0 1 608 1684" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 1684 L 608 1684" fill="none" stroke="none" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="49" x="95.5" y="392">publicWIFI</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="86.5" y="405">10.1.0.0/23</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="22" x="109.0" y="535">dmz</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="74" x="83.0" y="548">210.2.2.0/24</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="59" x="90.5" y="823">homeOffice</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="86.5" y="836">10.2.0.0/24</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="56" x="92.0" y="967">dataCenter</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="86.5" y="980">10.2.2.0/23</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="86" x="77.0" y="1111">homeAutomation</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="86.5" y="1124">10.2.8.0/21</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="60" x="90.0" y="1256">AV-Lighting</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="74" x="83.0" y="1269">10.2.24.0/21</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="29" x="105.5" y="1399">house</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="86.5" y="1412">10.2.4.0/23</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="85" x="77.5" y="1543">industrialControls</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="74" x="83.0" y="1556">10.2.16.0/21</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="55" x="92.5" y="1688">privateWIFI</text>
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="67" x="86.5" y="1701">10.2.6.0/23</text>
+  <path d="M 216 104 L 216 156" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216 196 L 216 248" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 180 172 A16,8 0 0 1 196 164 A16,6 0 0 1 236 164 A16,8 0 0 1 252 172 A16,8 0 0 1 252 188 A16,20 0 0 1 228 188 A16,20 0 0 1 204 188 A16,20 0 0 1 180 188 A16,8 0 0 1 180 172" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="38" x="216.0" y="181">internet</text>
+  <path d="M 216 248 L 216 300" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 232 340 L 232 388" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="267.5" y="367">10.1.0.1</text>
+  <path d="M 216 340 L 216 384" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216.0 384.0 A8.0,8.0 0 0 1 216.0 400.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216 400 L 216 532" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="255.0" y="511">210.2.2.1</text>
+  <path d="M 200 340 L 200 384" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200.0 384.0 A8.0,8.0 0 0 1 200.0 400.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200 400 L 200 528" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200.0 528.0 A8.0,8.0 0 0 1 200.0 544.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200 544 L 200 676" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="164" y="300" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="53" x="216.5" y="325">extFirewall</text>
+  <path d="M 380 396 L 380 444" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="328" y="444" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="380.0" y="469">WAP01</text>
+  <path d="M 532 396 L 532 444" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="480" y="444" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="532.0" y="469">WAP02</text>
+  <path d="M 380 540 L 380 588" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="419.0" y="567">210.2.2.2</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="328" y="588" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="35" x="380.5" y="613">web01</text>
+  <path d="M 532 540 L 532 588" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="571.0" y="567">210.2.2.3</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="480" y="588" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="35" x="532.5" y="613">web02</text>
+  <path d="M 684 540 L 684 588" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="723.0" y="567">210.2.2.4</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="632" y="588" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="32" x="684.0" y="614">vpn01</text>
+  <path d="M 836 540 L 836 588" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="875.0" y="567">210.2.2.5</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="784" y="588" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="32" x="836.0" y="614">vpn02</text>
+  <path d="M 216 684 L 216 732" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 264 772 L 264 820" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="299.5" y="799">10.2.0.1</text>
+  <path d="M 248 772 L 248 816" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 248.0 816.0 A8.0,8.0 0 0 1 248.0 832.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 248 832 L 248 964" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="283.5" y="943">10.2.2.1</text>
+  <path d="M 232 772 L 232 816" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 232.0 816.0 A8.0,8.0 0 0 1 232.0 832.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 232 832 L 232 960" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 232.0 960.0 A8.0,8.0 0 0 1 232.0 976.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 232 976 L 232 1108" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="267.5" y="1087">10.2.8.1</text>
+  <path d="M 216 772 L 216 816" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216.0 816.0 A8.0,8.0 0 0 1 216.0 832.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216 832 L 216 960" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216.0 960.0 A8.0,8.0 0 0 1 216.0 976.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216 976 L 216 1104" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216.0 1104.0 A8.0,8.0 0 0 1 216.0 1120.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 216 1120 L 216 1252" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="255.0" y="1231">10.2.24.1</text>
+  <path d="M 200 772 L 200 816" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200.0 816.0 A8.0,8.0 0 0 1 200.0 832.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200 832 L 200 960" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200.0 960.0 A8.0,8.0 0 0 1 200.0 976.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200 976 L 200 1104" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200.0 1104.0 A8.0,8.0 0 0 1 200.0 1120.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200 1120 L 200 1248" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200.0 1248.0 A8.0,8.0 0 0 1 200.0 1264.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 200 1264 L 200 1396" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="235.5" y="1375">10.2.4.1</text>
+  <path d="M 184 772 L 184 816" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184.0 816.0 A8.0,8.0 0 0 1 184.0 832.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184 832 L 184 960" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184.0 960.0 A8.0,8.0 0 0 1 184.0 976.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184 976 L 184 1104" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184.0 1104.0 A8.0,8.0 0 0 1 184.0 1120.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184 1120 L 184 1248" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184.0 1248.0 A8.0,8.0 0 0 1 184.0 1264.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184 1264 L 184 1392" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184.0 1392.0 A8.0,8.0 0 0 1 184.0 1408.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 184 1408 L 184 1540" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="223.0" y="1519">10.2.16.1</text>
+  <path d="M 168 772 L 168 816" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168.0 816.0 A8.0,8.0 0 0 1 168.0 832.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 832 L 168 960" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168.0 960.0 A8.0,8.0 0 0 1 168.0 976.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 976 L 168 1104" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168.0 1104.0 A8.0,8.0 0 0 1 168.0 1120.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 1120 L 168 1248" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168.0 1248.0 A8.0,8.0 0 0 1 168.0 1264.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 1264 L 168 1392" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168.0 1392.0 A8.0,8.0 0 0 1 168.0 1408.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 1408 L 168 1536" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168.0 1536.0 A8.0,8.0 0 0 1 168.0 1552.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 168 1552 L 168 1684" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="203.5" y="1663">10.2.6.1</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="152" y="732" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="49" x="216.5" y="757">intFirewall</text>
+  <path d="M 380 828 L 380 876" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="415.5" y="855">10.2.0.2</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="328" y="876" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="53" x="380.5" y="902">primaryPC</text>
+  <path d="M 380 972 L 380 1020" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="415.5" y="999">10.2.2.2</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="328" y="1020" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="70" x="380.0" y="1045">DHCP-Server</text>
+  <path d="M 532 972 L 532 1020" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="567.5" y="999">10.2.2.3</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="480" y="1020" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="62" x="532.0" y="1045">DNS-Server</text>
+  <path d="M 684 972 L 684 1020" fill="none" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="719.5" y="999">10.2.2.4</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="632" y="1020" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="47" x="684.5" y="1046">openNAS</text>
+  <path d="M 380 1692 L 380 1740" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="328" y="1740" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="380.0" y="1765">WAP03</text>
+  <path d="M 532 1692 L 532 1740" fill="none" stroke="rgb(0,0,0)" />
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="104" x="480" y="1740" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="40" x="532.0" y="1765">WAP04</text>
+</svg>
