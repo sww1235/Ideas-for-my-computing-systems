@@ -25,6 +25,9 @@ nfs share.
 
 further scripts to customize for each individual system
 
+see [build processes](./build-processes.md) for more specific musings on
+building systems.
+
 look at using modified version of
 [terrorshell](http://www.github.com/sww1235/terrorshell) for bashrc etc.
 
@@ -95,7 +98,7 @@ defaults to main menu.
 -   Gitlab
 -   DHCP / DNS / LDAP DC
 -   Weather agrigator / monitoring point for local climate monitoring / server / forcaster
--   Database cluster (better to have one cluster or individual databases on each other machine for each service)
+-   Database cluster (better to have one cluster or individual databases on each other machine for each service?)
 -   NTS + GPS local time
 -   pfSense router / firewall
 -   Asterix Voip server
