@@ -9,7 +9,7 @@ compile does the actual compilation of binaries and kernels.
 
 #### Before imaging machine - can be completed at any time
 -   Create a basic disk image for \[linux|bsd\] with a basic root
-hirarchy (/root /bin /dev /proc /usr /home) as empty directories for
+hirarchy (/root /bin /dev /proc /usr /home /etc) as empty directories for
 mountpoints. (filesystem?)
 -   Copy master blank disk image for each individual machine. (snapshots? when?)
 -   Compile kernel using specific kernel flags for each machine / use case and
