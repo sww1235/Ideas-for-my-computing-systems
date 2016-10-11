@@ -109,3 +109,4 @@ defaults to main menu.
 -   update caching server
 -   Imaging build machines
 -   compliation cluster
+-   Mail server
