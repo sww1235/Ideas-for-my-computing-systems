@@ -110,3 +110,70 @@ defaults to main menu.
 -   Imaging build machines
 -   compliation cluster
 -   Mail server
+
+## Authentication
+
+Use kerberos and pam-kbr5. see list of links for other stuff
+
+Realm configuration decisions � MIT Kerberos Documentation
+<http://web.mit.edu/kerberos/krb5-latest/doc/admin/realm_config.html>>
+
+
+Host configuration � MIT Kerberos Documentation
+<http://web.mit.edu/kerberos/krb5-latest/doc/admin/host_config.html>
+
+
+NFS/Kerberos - Debian Wiki
+<https://wiki.debian.org/NFS/Kerberos>
+
+
+Building Kerberos V5 � MIT Kerberos Documentation
+<http://web.mit.edu/kerberos/krb5-latest/doc/build/index.html>
+
+
+K5Wiki
+<http://k5wiki.kerberos.org/wiki/Main_Page>
+
+
+Debian GNU and Ubuntu: Setting up MIT Kerberos 5
+<http://techpubs.spinlocksolutions.com/dklar/kerberos.html#krb-service>
+
+
+A Linux-PAM page
+<http://www.linux-pam.org/>
+
+
+pam-krb5 4.7
+<https://www.eyrie.org/~eagle/software/pam-krb5/readme.html>
+
+
+integrating kerberos with GDM NOT ldap NOT active directory - Google Search
+<https://www.google.com/search?client=safari&rls=en&q=integrating+kerberos+with+GDM&ie=UTF-8&oe=UTF-8#q=integrating+kerberos+with+GDM+NOT+ldap+NOT+active+directory>
+
+
+kerberos login linux -ldap -"active -directory" - Google Search
+<https://www.google.com/search?as_q=kerberos+login+linux&as_epq=&as_oq=&as_eq=ldap+%22active+directory%22&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=images&as_filetype=&as_rights=>
+
+
+Kerberos Infrastructure HOWTO
+<http://tldp.org/HOWTO/html>_single/Kerberos-Infrastructure-HOWTO/#client-configure
+
+
+Kerberos installation help
+<http://web.ornl.gov/~jar/HowToKerb.html>#Client
+
+
+Configuring a Kerberos 5 Client
+<https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html>/Reference_Guide/s1-kerberos-clients.html>
+
+
+pam_krb5(8): Kerberos 5 authentication - Linux man page
+<https://linux.die.net/man/8/pam_krb5>
+
+
+login.krb5(8): kerberos enhanced login program - Linux man page
+<https://linux.die.net/man/8/login.krb5>
+
+
+Kerberos On Ubuntu
+<http://www.alittletooquiet.net/text/kerberos-on-ubuntu.html>
