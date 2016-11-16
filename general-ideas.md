@@ -33,7 +33,7 @@ look at using modified version of
 
 look at [dotbot](https://github.com/anishathalye/dotbot)
 
-use a set of statically linked basic tools
+use a set of statically linked basic tools (ubase/sbase)
 
 ## Base OS
 
@@ -177,3 +177,6 @@ login.krb5(8): kerberos enhanced login program - Linux man page
 
 Kerberos On Ubuntu
 <http://www.alittletooquiet.net/text/kerberos-on-ubuntu.html>
+
+openBSD kerberized login program
+<http://man.openbsd.org/OpenBSD-5.3/login_krb5-or-pwd.8>
